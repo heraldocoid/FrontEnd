@@ -1,0 +1,75 @@
+<div class="container">
+    <form [formGroup]="formEmpresa" (submit)="crearEmpresa()">
+        <div class="row">
+            <div class="col-6">
+                <label>Tipo Empresa</label>
+                <select class="form-select" formControlName="tipoEmpresa">
+                    <option [value]="0">Seleccione</option>
+                    <option *ngFor="let tipEmp of listaTipoEmpresas" value="{{tipEmp.id}}">{{tipEmp.tipoEmpresa}}</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label>Documento</label>
+                <input type="text" class="form-control" formControlName="documento">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label>Dirección</label>
+                <input type="text" class="form-control" formControlName="direccion">
+            </div>
+            <div class="col-6">
+                <label>Nombre</label>
+                <input type="text" class="form-control" formControlName="nombre">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <label>Pais</label>
+                <select class="form-select" formControlName="pais">
+                    <option [value]="0">Seleccione</option>
+                    <option *ngFor="let pa of listaPaises" value="{{pa.id}}">{{pa.pais}}</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label>Departamento</label>
+                <select class="form-select" formControlName="departamento">
+                    <option [value]="0">Seleccione</option>
+                    <option *ngFor="let depa of listaDepartamentos" value="{{depa.id}}">{{depa.departamento}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <label>Ciudad</label>
+                <select class="form-select" formControlName="ciudad">
+                    <option [value]="0">Seleccione</option>
+                    <option *ngFor="let ciu of listaCiudades" value="{{ciu.id}}">{{ciu.ciudad}}</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label>Telefono</label>
+                <input type="text" class="form-control" formControlName="telefono">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <label>Representante</label>
+                <select class="form-select" formControlName="representante">
+                    <option [value]="0">Seleccione</option>
+                    <option *ngFor="let repre of listaRepresentante" value="{{repre.id}}">{{repre.nombre}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>
+

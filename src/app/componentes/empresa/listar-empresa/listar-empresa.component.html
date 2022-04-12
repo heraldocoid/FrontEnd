@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h3>Empresas</h3>
+        </div>
+        <div class="col-6">
+            <a href="/crearempresa"><button class="btn btn-danger">Crear Empresa</button></a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Documento</th>
+                    <th>Direccion</th>
+                    <th>Pais</th>
+                    <th>Departamento</th>
+                    <th>Ciudad</th>
+                    <th>Representante</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empresas of listaEmpresas">
+                    <td>{{empresas.tipoEmpresa.tipoEmpresa}}</td>
+                    <td>{{empresas.documento}}</td>
+                    <td>{{empresas.direccion}}</td>
+                    <td>{{empresas.pais.pais}}</td>
+                    <td>{{empresas.departamento.departamento}}</td>
+                    <td>{{empresas.ciudad.ciudad}}</td>
+                    <td>{{empresas.representante.nombre}}</td>
+                    <td><button class="btn btn-primary">Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

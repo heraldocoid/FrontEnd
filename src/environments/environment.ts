@@ -3,7 +3,20 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  urlListTipoEmpresa : "http://localhost:8080/tipoempresa/listar",
+  urlCreateTipoEmpresa : "http://localhost:8080/tipoempresa/crear",
+  urlListPais : "http://localhost:8080/pais/listar",
+  urlCreatePais : "http://localhost:8080/pais/crear",
+  urlListDepartamento : "http://localhost:8080/departamento/listar",
+  urlCreateDepartamento : "http://localhost:8080/departamento/crear",
+  urlListCiudad : "http://localhost:8080/ciudad/listar",
+  urlCreateCiudad : "http://localhost:8080/ciudad/crear",
+  urlListRepresentante : "http://localhost:8080/representante/listar",
+  urlCreateRepresentante : "http://localhost:8080/representante/",
+  urlListEmpresa : "http://localhost:8080/empresa/listar",
+  urlCreateEmpresa : "http://localhost:8080/empresa/",
 };
 
 /*
